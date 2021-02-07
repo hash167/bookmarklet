@@ -32,7 +32,7 @@ class UserRegistrationForm(forms.ModelForm):
         user_emails = User.objects.filter(email=email)
         if user_emails.exists():
             raise forms.ValidationError('Email address exists')
-        return cd
+        return email
 
 
 class UserEditForm(forms.ModelForm):
